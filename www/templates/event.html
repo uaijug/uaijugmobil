@@ -1,0 +1,47 @@
+<ion-view view-title="Session">
+  <ion-content>
+    <div class="list card">
+      <div class="item">
+      <strong> <h1> Detalhes do Evento </h1> </strong>
+      <br />
+      <h3>Tipo do Evento: {{event.eventCategory.name}}</h3>
+      </div>
+      <div class="item item-body">
+        <h2>Nome do Evento: {{event.name}}</h2>
+        <h2>Realização: {{event.institution.name}}</h2>
+        <p>{{event.startDate | date:'dd/MM/yyyy HH:mm:ss'}}</p>
+        <p>{{event.endDate | date:'dd/MM/yyyy HH:mm:ss'}}</p>
+        <p>Local: {{event.local}}</p>
+        <p>Descrição: {{event.description}}</p>
+        <p>  <strong> <h1> Seções: </h1> </strong> </p>
+        <ion-item ng-repeat="session in sessions"
+                  href="#/app/sessions/{{session.id}}"><strong>{{session.name}}</strong><br />
+                De {{session.startDate | date:'dd/MM/yyyy HH:mm:ss'}}
+                até {{session.endDate | date:'dd/MM/yyyy HH:mm:ss'}}<br />
+                Local {{session.room.name}}
+
+        </ion-item>
+        <p>  <strong> <h1> Patrocinadores: </h1> </strong> </p>
+        <ion-item ng-repeat="sponsor in event.sponsors"
+                  href="#/app/sponsors/{{sponsor.id}}"><strong>{{sponsor.name}}</strong><br />
+                  {{sponsor.email}}<br />
+                  {{sponsor.twitter}}
+        </ion-item>
+      </div>
+      <div class="item tabs tabs-secondary tabs-icon-left">
+        <a class="tab-item">
+          <i class="icon ion-thumbsup"></i>
+          Like
+        </a>
+        <a class="tab-item">
+          <i class="icon ion-chatbox"></i>
+          Comment
+        </a>
+        <a class="tab-item">
+          <i class="icon ion-share"></i>
+          Share
+        </a>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

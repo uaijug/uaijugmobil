@@ -1,0 +1,50 @@
+<ion-view view-title="Session">
+  <ion-content>
+    <div class="list card">
+      <div class="item">
+        <div class="text-center">
+          <img ng-src="img/comics-mask-icon.png" class="image item-icon-center">
+          <strong>{{speaker.name}}</strong><br />
+          <i class="icon ion-code-working"></i> {{speaker.work}}
+        </div>
+      </div>
+      <ion-list>
+       <ion-item class="item-divider item-icon-right"><b>Sobre o Palestrante:</b> <i class="icon ion-ios-bookmarks-outline"></i></ion-item>
+       <ion-item>
+         {{speaker.curriculum}}
+       </ion-item>
+     </ion-list>
+     <br>
+     <ion-list>
+       <ion-item class="item-divider item-icon-right"><b>Contatos</b> <i class="icon ion-chatboxes"></i></ion-item>
+       <ion-item class="item-icon-right" ng-click="mail()">
+         {{speaker.email}}
+         <i class="icon ion-ios-email"></i>
+       </ion-item>
+       <ion-item class="item-icon-right" ng-click="call()">
+         {{speaker.linkedin}}
+         <i class="icon ion-social-linkedin-outline"></i>
+       </ion-item>
+       <ion-item class="item-icon-right" ng-click="website()">
+          {{speaker.twitter}}
+         <i class="icon ion-social-twitter-outline"></i>
+       </ion-item>
+     </ion-list>
+   </div>
+      <div class="item tabs tabs-secondary tabs-icon-left">
+        <a class="tab-item">
+          <i class="icon ion-thumbsup"></i>
+          Like
+        </a>
+        <a class="tab-item">
+          <i class="icon ion-chatbox"></i>
+          Comment
+        </a>
+        <a class="tab-item">
+          <i class="icon ion-share"></i>
+          Share
+        </a>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

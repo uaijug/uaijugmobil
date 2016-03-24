@@ -1,0 +1,16 @@
+<ion-view view-title="Events">
+  <ion-content>
+    <ion-list>
+      <ion-item ng-repeat="event in events">
+          <div class="list card">
+            <a href="#/app/events/{{event.id}}" class="item item-avatar item-icon-right">
+                <img src="img/comics-mask-icon.png">
+                <h2>{{event.name}}</h2>
+                <p>19 - marco -2016 - Universidade Federal de Uberlandia</p>
+                <i class="icon ion-forward muted"></i>
+              </div>
+            </a>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

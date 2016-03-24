@@ -1,0 +1,36 @@
+<ion-view view-title="Session">
+  <ion-content>
+    <div class="list card">
+      <div class="item">
+        <h1><strong>{{session.name}}</strong></h1>
+      </div>
+      <div class="item item-body">
+          <p>{{session.description}}</p>
+          <p>{{session.startDate | date:'dd/MM/yyyy HH:mm:ss Z'}}</p>
+          <p>{{session.endDate | date:'dd/MM/yyyy HH:mm:ss Z'}}</p>
+          <p>  <strong> <h1> Palestrante: </h1> </strong> </p>
+          <p>
+           <ul>
+            <li ng-repeat="speaker in session.speakers">
+              <a href="#/app/speakers/{{speaker.id}}">{{speaker.name}}</a>
+              <br />{{speaker.twitter}}<br />{{speaker.email}}<br /></li>
+           </ul>
+          </p>
+      </div>
+      <div class="item tabs tabs-secondary tabs-icon-left">
+        <a class="tab-item">
+          <i class="icon ion-thumbsup"></i>
+          Like
+        </a>
+        <a class="tab-item">
+          <i class="icon ion-chatbox"></i>
+          Comment
+        </a>
+        <a class="tab-item">
+          <i class="icon ion-share"></i>
+          Share
+        </a>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,29 @@
+<ion-view view-title="dashboard">
+  <ion-content>
+    <ion-list>
+      <ion-item>
+        <div class="list card" ng-repeat="news in newsList">
+          <div ui-sref="app.gallery" class="card stable-bg ink ink-dark">
+              <div class="item item-avatar item-text-wrap">
+                  <span class="avatar" style="background-image: url('img/comics-mask-icon.png');"></span>
+                          <strong><a href="#/app/news/{{news.id}}">{{news.title}}</a></strong>
+                          <p>
+                              {{news.description}}
+                          </p>
+                          <p>
+                              {{news.institution.name}}
+                          </p>
+                          <div class="card-footer text-right item-divider">
+                                  <i class="icon ion-chatbubbles positive"></i> 6
+                                  <i class="icon ion-heart assertive"></i> 23
+                                  <div class="pull-left">
+                                      <i class="icon ion-clock"></i> 19 - marco - 2016 | Author: <a href="#/">{{news.author}}</a>
+                                  </div>
+                          </div>
+                      </div>
+                  </div>
+         </ion-item>
+        </div>
+    </ion-list>
+  </ion-content>
+</ion-view>
