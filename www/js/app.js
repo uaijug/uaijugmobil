@@ -4,9 +4,9 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-angular.module( 'starter', [ 'ionic', 'starter.controllers', 'ionic-material' ] )
+angular.module( 'starter', [ 'ionic', 'starter.controllers', 'ionic-material', 'ngOpenFB' ] )
 
-.run( function ( $ionicPlatform ) {
+.run( function ( $ionicPlatform, ngFB ) {
     $ionicPlatform.ready( function () {
         // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
         // for form inputs)
@@ -20,6 +20,7 @@ angular.module( 'starter', [ 'ionic', 'starter.controllers', 'ionic-material' ] 
             StatusBar.styleDefault();
         }
     } );
+    ngFB.init({appId: '202722806767291'});
 } )
 
 .constant( 'API_BASE_URL', "http://localhost:5000")
